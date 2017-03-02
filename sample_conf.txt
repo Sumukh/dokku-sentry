@@ -1,0 +1,23 @@
+DATABASE_URL='postgres://postgres:replaceme@dokku-postgres-sentry-new:5432/sentry_new'
+REDIS_URL='redis://dokku-redis-sentry-new:6379'
+SENTRY_DB_NAME='sentry_new'
+SENTRY_DB_PASSWORD='replaceme'
+SENTRY_DB_USER='postgres'
+SENTRY_POSTGRES_HOST='dokku-postgres-sentry-new'
+SENTRY_POSTGRES_PORT='5432'
+SENTRY_REDIS_HOST='dokku-redis-sentry-new'
+SENTRY_SECRET_KEY='censored'
+
+SENTRY_EMAIL_HOST=smtp.mailgun.org
+SENTRY_EMAIL_PORT=2525
+SENTRY_EMAIL_USER=sentry@yourdomain.com
+SENTRY_EMAIL_PASSWORD=censored
+SENTRY_EMAIL_USE_TLS=True
+SENTRY_SERVER_EMAIL=sentry@yourdomain.com
+SENTRY_MAILGUN_API_KEY=censored
+
+SENTRY_USE_SSL=1
+GITHUB_APP_ID=censored
+GITHUB_API_SECRET=censored
+
+# dokku config:set sentry REDIS_URL=r... SENTRY_DB_NAME=se...

@@ -1,3 +1,7 @@
-cffi==1.8.3               # via cryptography, symsynd
-sentry==8.17.0
+cffi==1.8.3
+sentry==8.14.0
 uWSGI>2.0.0,<2.1.0
+
+# Plugins
+sentry-plugins
+https://github.com/getsentry/sentry-auth-github/archive/master.zip

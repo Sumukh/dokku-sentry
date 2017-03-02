@@ -1,9 +1,8 @@
 # dokku-sentry
 
-Deploy [Sentry](https://github.com/getsentry/sentry) 8.x on [dokku](http://dokku.viewdocs.io/dokku/) with official [postgres](https://github.com/dokku/dokku-postgres) and [redis](https://github.com/dokku/dokku-redis) plugins.
+Deploy [Sentry](https://github.com/getsentry/sentry) 8.14+ on [dokku](http://dokku.viewdocs.io/dokku/) with official [postgres](https://github.com/dokku/dokku-postgres) and [redis](https://github.com/dokku/dokku-redis) plugins.
 
-This setup uses [uWSGI](https://uwsgi-docs.readthedocs.org/en/latest/) as master process for all the child processes needed to properly run Sentry:
-
+Forked from https://github.com/darklow/dokku-sentry
 
 Instructions:
 
@@ -22,6 +21,9 @@ sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git postgres
 sudo dokku plugin:install https://github.com/dokku/dokku-redis.git redis
 
 ```
+
+3) Install dokku letsencrypt plugin
+
 
 ## Prepare dokku
 
@@ -52,7 +54,7 @@ ssh dokku@yourserver config:set sentry SENTRY_CONF=./
 
 1) Clone this repository locally
 ```
-git clone https://github.com/darklow/dokku-sentry.git
+git clone https://github.com/sumukh/dokku-sentry.git
 cd dokku-sentry
 ```
 
@@ -88,11 +90,7 @@ ssh -t dokku@yourserver run sentry "sentry createuser"
 
 ## Customize sentry config
 
-You can customise `sentry.conf.py` to fit your needs. However you can also override any config variable using dokku env vars. Use `SC_` prefix (as of Sentry Config) to override specific sentry config variables. For example:
-
-```
-ssh dokku@yourserver config:set sentry SC_EMAIL_HOST=mail.yourserver.com SC_EMAIL_HOST_USER=sentry@yourserver.com SC_EMAIL_HOST_PASSWORD=XYZ123 SC_SERVER_EMAIL=sentry@yourserver.com SC_EMAIL_USE_TLS=True
-```
+You can customise `sentry.conf.py` to fit your needs. However you can also override any config variable using dokku env vars. Use `SC_` prefix (as of Sentry Config) to override specific sentry config variables.
 
 
 ## Notes

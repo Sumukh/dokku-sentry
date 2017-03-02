@@ -1,7 +1,7 @@
 {
 	"name": "Sentry",
 	"description": "Sentry is a realtime event logging and aggregation platform",
-	"repository": "https://github.com/fastmonkeys/sentry-on-heroku",
+	"repository": "https://github.com/sumukh/dokku-sentry",
 	"website": "http://getsentry.com",
 	"keywords": [
 		"logging",
@@ -10,6 +10,8 @@
 	"addons": [],
 	"env": {},
 	"scripts": {
-		"postdeploy": "sentry --config=sentry.conf.py upgrade --noinput"
+		"dokku": {
+			"postdeploy": "sentry --config=sentry.conf.py upgrade --noinput"
+		}
 	}
 }
