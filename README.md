@@ -1,3 +1,7 @@
+## Archived & Unmaintained 
+
+Look at https://github.com/mimischi/dokku-sentry for a more up to date version.
+
 # dokku-sentry
 
 Deploy [Sentry](https://github.com/getsentry/sentry) 8.14+ on [dokku](http://dokku.viewdocs.io/dokku/) with official [postgres](https://github.com/dokku/dokku-postgres) and [redis](https://github.com/dokku/dokku-redis) plugins.
